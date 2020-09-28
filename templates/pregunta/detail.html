@@ -1,0 +1,63 @@
+{% extends 'base.html'%}
+
+{% block title%} Pregunta {% endblock %}
+
+
+
+
+{% block content %}
+<script>
+    function del_but_color(){
+        document.getElementById("A").classList.remove('bg-success');
+            document.getElementById("A").classList.remove('bg-danger');
+            document.getElementById("B").classList.remove('bg-success');
+            document.getElementById("B").classList.remove('bg-danger');
+            document.getElementById("C").classList.remove('bg-success');
+            document.getElementById("C").classList.remove('bg-danger');
+    }
+
+    function is_respuesta(resp){
+    
+        if(resp == "{{ pregunta.resp_c }}" ){
+            del_but_color();
+            document.getElementById(resp).classList.add('bg-success');
+        } else {
+            del_but_color();
+
+            document.getElementById(resp).classList.add('bg-danger');
+        }
+    
+    }
+    </script>
+    <div class="card">
+
+        <div class="card-header"><h3>{{ pregunta.pregunta_s}}</h3>  </div>
+        <div class="container ">
+            
+                <div class = "row p-1">
+                        <button onclick="is_respuesta('A')" id="A" class="btn col-lg"> 
+                           <h4>{{ pregunta.respuesta_a}}</h4>
+                         </button>
+                    
+                </div>
+                <div class = "row p-1">
+                        <button onclick="is_respuesta('B')" id="B" class="btn col-lg"> 
+                            <h4>{{ pregunta.respuesta_b}}</h4>
+                         </button>
+    
+                </div>
+                <div class = "row p-1"> 
+                        <button onclick="is_respuesta('C')" id="C" class="btn col-lg"> 
+                            <h4>{{ pregunta.respuesta_c}}</h4>
+                        </button>
+
+                </div>
+
+        </div>
+        <a href="/random" ><div class="card-footer">
+             Go to random
+        </div></a>
+
+    </div>
+
+{% endblock %}

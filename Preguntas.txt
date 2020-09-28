@@ -1,0 +1,362 @@
+1.- A¿Cuál de las afirmaciones siguientes es cierta?
+a) Un sistema operativo escrito en lenguaje máquina no es portable a otras plataformas.
+b) Un sistema operativo escrito en lenguaje máquina es portable a otras plataformas.
+c) Un sistema operativo escrito en lenguaje máquina podría ser portable a otras plataformas.
+2.- C¿Entre quiénes hace de intermediario el Sistema Operativo?
+a) Entre los programas de aplicación y los usuarios.
+b) Entre los programas de aplicación y usuarios, y el hardware.
+c) Entre el hardware y el software.
+3.- B¿Qué hace el Sistema Operativo?
+a) sólo gestiona los recursos físicos de la máquina.
+b) gestiona los recursos físicos y supervisa las ejecuciones.
+c) sólo supervisa las ejecuciones.
+4.- C¿Qué engloba el término Sistema de Computación?
+a) Hardware, firmware y sistema operativo.
+b) Hardware, firmware y sistema operativo y programas de aplicación.
+c) Hardware, firmware, software y recursos humanos.
+5.- CEl sistema operativo es un conjunto de programas implementados tanto en 'software' como en 'firmware' que hacen asequible el 'hardware'. ¿Qué significa "hacer asequible el hardware"?
+a) Que el 'hardware' se pueda ampliar fácilmente para que se adecue a lasdiferentes necesidades del usuario.
+b) Que la combinación del 'software' y 'firmware' realice funciones del 'hardware' y el coste sea menor.
+c) Que el 'hardware' esté disponible de la forma más adecuada y que aumente el rendimiento total.
+6.- CAumentar el rendimiento total implica
+a) aumentar el rendimiento específico y disminuir la disponibilidad.
+b) disminuir el rendimiento específico y aumentar la disponibilidad.
+c) aumentar tanto el rendimiento específico como la disponibilidad.
+7.- A¿En qué consiste la función de provisión de máquina virtual?
+a) En presentar a cada usuario una serie de elementos lógicos a manipular.
+b) En conseguir que el hardware sea inaccesible a los usuarios.
+c) En diseñar un buen interfaz de usuario para los programas del sistema.
+8.- B¿Cuál de las afirmaciones siguientes sobre las llamadas al sistema es falsa?
+a) Se ejecutan como respuesta a un trap.
+b) No se usa directamente.
+c) Direccionan programas del sistema.
+9.- C¿Qué caracteriza más a un sistema operativo?
+a) Los mandatos.
+b) Las llamadas al sistema.
+c) Los programas del sistema.
+10.- B¿Cuál de las siguientes opciones recoge funciones del SO desde el punto de vista de usuario?
+a) Contabilidad del sistema, interfaz de usuario y gestión del sistema de ficheros.
+b) Gestión de los recursos del sistema e interfaz de usuario.
+c) Planificación de procesos, protección y gestión de memoria.
+11.- B¿Cuál de las siguientes opciones recoge funciones del nivel de núcleo del sistema operativo?
+a) Gestión del sistema de archivos y control de procesos.
+b) Asignación de recursos a procesos y comunicación entre procesos.
+c) Comunicación entre procesos, manipulación de archivos y gestión de memoria.
+12.- A¿Cuál de las siguientes opciones agrupa funciones internas del SO?
+a) Gestión de memoria, control de errores y gestión de operaciones de entrada / salida.
+b) Contabilidad del sistema, intérprete de comandos y planificación de procesos.
+c) Supervisión de las ejecuciones, ejecución de programas de aplicación e intérprete de comandos.
+13.- A¿Entre qué dos elementos hace de interfaz el shell o intérprete de comandos?
+a) Entre los usuarios y el sistema operativo.
+b) Entre los usuarios y los periféricos.
+c) Entre los periféricos y el hardware.
+14.- BLa función de interna de contabilidad del sistema permite:
+a) realizar la asignación de recursos y el 'tuning' del sistema.
+b) la facturación por utilización del sistema y la optimización del mismo.
+c) gestionar la autorización de acceso al sistema y la asignación de recursos a los usuarios.
+15.- B¿Qué se consigue al implementar el intérprete de comandos en un solo programa que incluya el código de todos los mandatos?
+a) Mayor flexibilidad.
+b) Menor sobrecarga.
+c) Facilidad de ampliación.
+16.- C¿Cuál de las siguientes funciones de los sistemas operativos están dirigidas al usuario?
+a) Asignación de recursos.
+b) Contabilidad.
+c) Facilidades para operaciones de E/S.
+17.- C¿Por qué los sistemas de propósito general incluyen un gran número de utilidades?
+a) Para mantener un flujo constante de trabajos.
+b) Para permitir un adecuado control de dispositivos y periféricos.
+c) Por tener que dar respuesta una gran diversidad de tareas.
+18.- B¿Qué función de las internas del sistema operativo, se encarga del control de la utilización de la información y de su integridad?
+a) La función de asignación de recursos.
+b) La función de protección.
+c) La función de compartición.
+19.- A¿De qué dos modos proporciona el sistema operativo sus servicios?
+a) Mediante llamadas al sistema y programas del sistema.
+b) Mediante la gestión y el soporte.
+c) Mediante extracódigos y funciones de librería.
+20.- B¿Qué componente o grupo de funciones se encarga de asegurar que las actividades del sistema de proceso de datos puedan tener lugar?
+a) El soporte de gestión.
+b) El soporte.
+c) El gestor de datos.
+21.- B¿Qué es el Intérprete de Comandos?
+a) Una Llamada al sistema.
+b) Un Programa del sistema.
+c) Un microprograma que se encuentra en las memorias de control.
+22.- C¿Quién proporciona el interfaz entre los programas en ejecución y el sistema operativo?
+a) Los programas del sistema.
+b) Los microprogramas.
+c) Las llamadas al sistema.
+23.- A¿Qué hace el gestor de tareas?
+a) Supervisa dinámicamente los recursos que usa cada tarea.
+b) Supervisa dinámicamente los procesos involucrados en cada tarea.
+c) Supervisa dinámicamente las actividades involucradas en cada tarea.
+24.- C¿Cuál de las siguientes afirmaciones respecto del soporte de gestión es cierta?
+a) Pertenece al componente gestor de un sistema operativo.
+b) Engloba al componente gestor de un sistema operativo.
+c) Pertenece al componente soporte de un sistema operativo.
+25.- BLas funciones que proporciona todo sistema operativo se pueden clasificar en
+a) funciones desde el punto de vista del usuario y llamadas al sistema.
+b) funciones desde el punto de vista del usuario y funciones internas del sistema.
+c) funciones para lograr la máquina virtual y funciones de utilidad.
+26.- A¿Qué problemas deben resolverse al implementar la compartición de recursos?
+a) La ubicación y protección de los recursos y la simultaneidad de accesos y ejecuciones.
+b) La contabilidad de utilización de los recursos por los diferentes usuarios.
+c) El costo de los recursos a compartir.
+27.- C¿En qué componente se sitúan las funciones que facilitan la tarea de tuning del sistema?
+a) En el Gestor de tareas.
+b) En el Soporte.
+c) En el Soporte de gestión.
+28.- CLa unidad mínima que se puede presentar a ejecución a un sistema se
+denomina:
+a) Tarea.
+b) Proceso.
+c) Trabajo.
+29.- A¿Quién proporciona el interfaz entre los usuarios y el sistema operativo?
+a) Los programas del sistema.
+b) Las llamadas al sistema.
+c) Los programas de utilidad.
+30.- A¿Cuál de las afirmaciones siguientes es cierta?
+a) Los programas del sistema requieren de la ejecución de llamadas al sistema.
+b) Las llamadas al sistema direccionan programas del sistema.
+c) Las llamadas al sistema y los programas del sistema no guardan ninguna relación.
+31.- B¿Cómo se denomina la característica de los sistemas operativos que indica la velocidad, el buen funcionamiento y cantidad de funciones que proporciona?
+a) Generalidad y flexibilidad.
+b) Eficiencia y disponibilidad.
+c) Mantenibilidad y extensibilidad.
+32.- ALa garantía de servicios mínimos es una cualidad especialmente importante en:
+a) Los sistemas operativos de tiempo real.
+b) Los sistemas operativos multiprogramados.
+c) Los sistemas operativos transaccionales.
+33.- B¿Qué es mejor para un sistema con varios terminales?
+a) Un sistema por lotes con 'spooling'.
+b) Un sistema multiusuario.
+c) Un sistema de tiempo real.
+34.- C¿Cuál de las siguientes afirmaciones es cierta?
+a) Los sistemas de tiempo compartido y multiprogramados son los mismos
+b) Los sistemas de tiempo compartido conmutan los recursos entre los procesos.
+c) Los sistemas de tiempo compartido y multiprogramados son complementarios.
+35.- CDe las siguientes ¿cuáles son las características a destacar en los sistemas transaccionales?
+a) Definición y gestión de una máquina virtual.
+b) Reacción inmediata ante eventos.
+c) Fiabilidad y disponibilidad.
+36.- C¿Es necesaria la función de asignación y planificación de recursos en los sistemas monousuario?
+a) No.
+b) Depende de la arquitectura del sistema operativo.
+c) Sí.
+37.- A¿Cuál de las siguientes afirmaciones es cierta?
+a) Todos los sistemas de tiempo real presentan restricciones de tiempo de procesamiento informático.
+b) Todos los sistemas de tiempo real son sistemas de control de procesos.
+c) Todos los sistemas de tiempo real presentan un buen interfaz de usuario para tratamientos críticos.
+38.- A¿Cuáles son las principales características de los sistemas de 'time-sharing'/multiprogramados?
+a) Soportar la concurrencia conmutando los recursos entre los procesos y darservicio a N usuarios simultáneamente.
+b) Soportar varios procesadores trabajando concurrentemente y dar servicio a N usuarios simultáneos.
+c) Soportar la ejecución de procesos críticos mediante 'time slicing' conmutando los recursos entre N usuarios simultáneos.
+39.- A¿Cuál de las siguientes afirmaciones es cierta?
+a) En los sistemas transaccionales el sistema operativo controla los accesos concurrentes requeridos por las transacciones.
+b) En los sistemas transaccionales las transacciones incluyen en su código lo necesario para el control de los accesos concurrentes.
+c) En los sistemas transaccionales el sistema operativo secuencia las transacciones para evitar los problemas de concurrencia.
+40.- B¿Cuál de las siguientes afirmaciones es correcta?
+a) Todos los sistemas multiprocesador son distribuidos.
+b) Todos los sistemas distribuidos utilizan una red.
+c) Todos los sistemas multiprocesador utilizan una red.
+41.- C¿Hay alguna relación hay entre los sistemas monolíticos y los modulares?
+a) Ninguna, un sistema modular no es un sistema monolítico sino por niveles.
+b) Los sistemas monolíticos pueden ser modulares.
+c) Se diferencian en que en un sistema monolítico nunca hay ocultamiento de información.
+42.- C¿Cuál de las siguientes afirmaciones es correcta?
+a) Los sistemas por niveles están compuestos de cinco capas que son: Intérprete de comandos, Sistema de ficheros, Gestión de memoria, E/S básica y núcleo.
+b) En los sistemas operativos por niveles hay tantos módulos como niveles.
+c) En los sistemas operativos por niveles, cada nivel proporciona a los niveles superiores un conjunto de objetos y primitivas.
+43.- A¿Qué funciones del sistema operativo se separan al diseñar los sistemas de máquina virtual?
+a) El soporte de la multiprogramación y la provisión de máquina virtual.
+b) Las que implementan la mecánica y la política.
+c) Las del núcleo y las del resto de niveles
+44.- BEn un sistema de máquina virtual, ¿cuál es el elemento encargado de gestionar los recursos de cada máquina?
+a) El Monitor de Máquina Virtual en el caso de cada máquina virtual, y el sistema operativo instalado sobre el Monitor de Máquina Virtual en el caso de la máquina real.
+b) El Monitor de Máquina Virtual en el caso de la máquina real, y cada sistema operativo instalado sobre el Monitor de Máquina Virtual en el caso de cada máquina virtual.
+c) El Monitor de Máquina Virtual es el encargado de gestionar tanto la máquina real como cada máquina virtual.
+45.- C¿Cuál de las siguientes opciones agrupa tendencias actuales de los sistemas operativos?
+a) Procesamiento centralizado, procesamiento paralelo y mayor amigabilidad.
+b) Procesamiento distribuido, acceso monousuario y procesamiento paralelo.
+c) Procesamiento distribuido, máquina virtual y procesamiento paralelo.
+46.- B¿Cuál es la relación entre los sistemas basados en microkernel y los sistemas clientes-servidor?
+a) Todos los sistemas cliente-servidor son sistemas basados en microkernel.
+b) Todos los sistemas basados en microkernel son sistemas cliente-servidor.
+c) Todos los sistemas basados en microkernel NO son sistemas clienteservidor.
+47.- A¿Qué parte de los sistemas de máquina virtual implementa la política del sistema?
+a) Cada sistema operativo instalado sobre el hardware virtual.
+b) El software instalado sobre el hardware virtual.
+c) El monitor de máquina virtual que es el que proporciona el hardware virtual.
+48.- CEn un sistema basado en microkernel ¿cuál de las afirmaciones siguiente es correcta?
+a) El núcleo es el elemento encargado de manipular el hardware, siempre a petición de los clientes.
+b) El núcleo es el elemento encargado de manipular el hardware, y sin recibir peticiones de otros módulos.
+c) El núcleo es el elemento encargado de manipular el hardware, siempre a petición de los servidores.
+49.- C¿En qué fase de la evolución de los S.O. había una interacción directa con el hardware por parte del usuario?
+a) Cuando se desarrolló el 'Time Sharing'.
+b) Cuando se desarrolló el Tiempo Real.
+c) Cuando no había S.O.
+50.- C¿Cuál de las siguientes afirmaciones es cierta?
+a) 'Time Slicing' es lo mismo que 'Time Sharing'.
+b) 'Slice' es sinónimo de "quantum'.
+c) Sistema Interactivo es lo mismo que Sistema con 'Time Slicing'.
+51.- APersiguiendo los objetivos de la fase 4 de la evolución de los S.O., ¿qué nuevas necesidades de los usuarios se pretendían cubrir?
+a) Demanda de uso compartido de los recursos.
+b) Interacción con el sistema a coste razonable.
+c) Demanda de uso exclusivo de los recursos.
+52.- BEl determinismo, como característica de cualquier S.O. de propósito general, hace referencia a que el sistema debe:
+a) Saber responder con determinación ante cualquier evento que se produzca.
+b) Producir el mismo resultado siempre que se aplique la misma entrada en un mismo entorno.
+c) Funcionar bien y dar siempre la misma respuesta.
+53.- B¿Las técnicas de 'buffering' y de 'spooling' se diferencian en que ésta última hace posible el solapamiento de las operaciones de E/S de un trabajo con su propia computación?
+a) No.
+b) Si.
+c) Depende de la implementación de los buffers.
+54.- B¿Qué incluyen los sistemas operativos ejecutivos que no contemplan los supervisores?
+a) Nada.
+b) El tratamiento on-line.
+c) Los mecanismos de sincronización e interrupción.
+55.- BEn la evolución de los sistemas operativos tuvo lugar el desarrollo de los componentes o 'software básico', entre los que se incluían:
+a) El OSCL.
+b) Los subprogramas de E/S.
+c) La operación off-line.
+56.- C¿Qué es un sistema embebido?
+a) Un sistema de propósito específico que forma parte de un sistema mayor cuyo propósito principal es computacional.
+b) Un sistema de propósito específico que engloba de un sistema mayor cuyo propósito principal no es computacional.
+c) Un sistema de propósito específico que forma parte de un sistema mayor cuyo propósito principal no es computacional.
+57.- ALos programas que se ejecutan en los sistemas de propósito específico suelen estar implementados en
+a) Firmware.
+b) Lenguajes de alto nivel.
+c) Lenguaje natural.
+58.- BUna de las cosas que permite el 'Spooling' es:
+a) Liberar a la UCP de las operaciones de E/S.
+b) La planificación de trabajos.
+c) La utilización de D.A.A.D. en sustitución de las cintas.
+59.- ACon los monitores residentes o de encadenamiento
+a) la UCP ejecuta todas las instrucciones, incluidas las de E/S.
+b) la UCP únicamente ejecuta las instrucciones no involucradas en operaciones de E/S.
+c) la UCP únicamente ejecuta instrucciones relacionadas con operaciones de E/S.
+60.- A¿Cuáles de los siguientes grupos de elementos se incluían en los sistemas operativos denominados Monitores residentes o de encadenamiento?
+a) 'Software' básico, programa de control y O.S.C.L.
+b) 'Software' básico, programa maestro y programa de control.
+c) O.S.C.L., programa maestro y rutinas de entrada/salida.
+61.- A¿Cuál de las siguientes afirmaciones define la técnica de 'spooling'?
+a) El 'spooling' permite el solapamiento del proceso de un trabajo con la entrada/salida de otros trabajos.
+b) El 'spooling' permite el solapamiento del proceso de un trabajo con la entrada/salida del mismo.
+c) El 'spooling' permite el solapamiento del proceso de un trabajo con la ejecución de otros trabajos.
+62.- C¿Cuáles de las siguientes secuencias está ordenada cronológicamente, es decir, por orden de aparición?
+a) Ejecutores, Monitores de encadenamiento y Supervisores.
+b) Monitores de encadenamiento, Supervisores y Ejecutores.
+c) Monitores de encadenamiento, Ejecutores y Supervisores.
+63.- BLa gestión de memoria a dos niveles se implementa por primera vez en:
+a) Los monitores residentes o de encadenamiento.
+b) Los ejecutores o ejecutivos.
+c) Los supervisores.
+64.- B¿Cuál de los elementos siguientes son necesarios para soportar la multiprogramación?
+a) Gestor de 'buffers' en memoria.
+b) Conmutador de contexto.
+c) Conmutador de transacciones.
+65.- C¿Por qué se dice que las redes locales pueden sustituir a los sistemas de tiempo compartido?
+a) Porque cada trabajo se puede distribuir entre las máquinas individuales, de modo que equivalga a un sistema de tiempo compartido.
+b) Porque la red permite la compartición de recursos de una manera más eficaz que en los sistemas de tiempo compartido.
+c) Porque cada usuario dispone de una máquina individual y la red le permite la comunicación con otros usuarios y el acceso a servicios comunes.
+66.- A¿Los dos modos de procesamiento, Batch y On-Line, se implementan juntos por primera vez en?
+a) Los supervisores.
+b) Los ejecutores o ejecutivos.
+c) Los monitores residentes o de encadenamiento.
+67.- CLa conmutación de las I/O áreas se realizó
+a) de manera manual hasta el desarrollo de la multiprogramación.
+b) de manera manual hasta el desarrollo del procesamiento on-line.
+c) de manera manual hasta el desarrollo de los componentes.
+68.- C¿Cuál es la relación entre los Ejecutores o Ejecutivos y los monitores de encadenamiento?
+a) Los Monitores de Encadenamiento o Residentes engloban, entre otras cosas, todo aquello que ya tenían los Ejecutores o Ejecutivos.
+b) No existe ninguna relación entre ellos, puesto que se desarrollan en fases paralelas y sin ninguna relación entre sí.
+c) Los Ejecutores o Ejecutivos engloban, entre otras cosas, todo aquello que ya tenían los Monitores de Encadenamiento o Residentes.
+69.- CUna de las tendencias actuales en el desarrollo de sistemas operativos es el procesamiento distribuido, es decir:
+a) Que varios procesadores forman un sistema masivamente paralelo para explotar la concurrencia.
+b) Que varios ordenadores se conectan mediante redes locales para acceder a recursos comunes.
+c) Que varios ordenadores cooperan para realizar un trabajo.
+70.- B¿Cuál es la diferencia de concepto entre "tiempo de respuesta" y "tiempo de retorno"?
+a) La primera de ellas hace referencia al rendimiento específico, mientras que la segunda de ellas es referente al rendimiento total.
+b) Ninguna, ambos hacen referencia al mismo concepto en entornos diferentes.
+c) La primera de ellas hacer referencia al rendimiento específico y la segunda de ellas al 'throughput'.
+71.- A¿Cuál de los siguientes mecanismos hardware NO es un requisito para construir un sistema operativo multiprogramado con protección entre usuarios?
+a) Memoria virtual.
+b) Protección de memoria.
+c) Modo dual de operación: núcleo y usuario.
+72.- CLa técnica de intercalación o 'interleaving' de memoria se usa para:
+a) Acceder simultáneamente a una posición de un banco de memoria.
+b) Acceder simultáneamente a posiciones contiguas de un banco de memoria.
+c) Acelerar el acceso a memoria principal.
+73.- ASi se comparase la eficiencia del código generado por los compiladores con el generado por los intérpretes, ¿qué podría afirmarse?:
+a) El código generado por los compiladores está más optimado y es más eficiente que el de los intérpretes.
+b) El código generado por los intérpretes está más optimado y es más eficiente que el de los compiladores.
+c) El código generado por los intérpretes es igual de eficiente y óptimo que el de los compiladores.
+74.- BSegún la lectura 'How are computers categorized?' ¿cuáles de los siguientes son criterios que se usan para la clasificación de las computadoras de propósito general?
+a) Arquitectura, tamaño físico de la máquina, tipo de problemas a resolver.
+b) Velocidad de procesamiento, número de usuarios, precio.
+c) Velocidad de procesamiento y de los dispositivos de entrada, portabilidad.
+75.- C¿Cuál es el cometido del 'linkage-editor'?
+a) Completar programas ejecutables y dejarlos en la 'lista ready' para su ejecución.
+b) Resolver las referencias pendientes del código objeto y crear ejecutables en memoria principal para su ejecución.
+c) Añadir a los programas objetos rutinas del sistema y crear ejecutables en memoria auxiliar.
+76.- B¿Es posible realizar la operación de 'binding' tras la carga del ejecutable en memoria real?
+a) No.
+b) Sí.
+c) Depende del cargador.
+77.- CLa técnica de robo de ciclo consiste en
+a) dar prioridad en el 'bus' del sistema a la UCP frente a los canales durante los accesos a memoria.
+b) dar prioridad en el 'bus' del sistema al canal que sirva a más dispositivos durante los accesos a memoria.
+c) dar prioridad en el 'bus' del sistema a los canales frente a la UCP durante los accesos a memoria.
+78.- ADe entre los distintos niveles de la jerarquía de memoria, ¿en cuál es mayor el coste por unidad de información almacenada?
+a) Los registros máquina.
+b) Memoria caché.
+c) Memoria principal.
+79.- B¿En qué sistemas se utiliza un registro FENCE para la protección de memoria?
+a) Multiprogramada
+b) Monoprogramada
+c) De time-sharing
+80.- A¿Qué es más potente, un ordenador de 2 MIPs, uno de 4 MIPs o uno de de 2 BIPs?
+a) El de 2 BIPs.
+b) El de 4 MIPs.
+c) El de 2 MIPs.
+81.- B¿Cuál es el cometido del 'Link-loader'?
+a) Completar programas ejecutables y dejarlos listos para su ejecución en memoria auxiliar.
+b) Añadir a los programas objetos rutinas del sistema y crear ejecutables en memoria principal.
+c) Resolver las referencias pendientes del código objeto y crear ejecutables en memoria auxiliar.
+82.- ALa validación de las direcciones generadas por los procesos de usuario en
+ejecución se realiza por
+a) 'hardware'.
+b) 'software'.
+c) 'firmware'.
+83.- AEl canal DMA implementa una técnica que minimiza
+a) el número de interrupciones de entrada/salida.
+b) el número de operaciones de entrada/salida.
+c) el número de instrucciones de entrada/salida.
+84.- C¿Cuál de las siguientes instrucciones es privilegiada?
+a) Servir una interrupción de petición de E/S.
+b) Inicializar la memoria a ceros binarios.
+c) Inicializar el temporizador.
+85.- A¿Qué incluye el firmware?
+a) Programas permanentes grabados en dispositivos hardware.
+b) Software no libre.
+c) Tablas de datos, grabadas de forma permanente en dispositivos hardware, que "parametrizan" el funcionamiento de los drivers de un sistema.
+86.- A¿Qué se consigue con la implementación en microcódigo de ciertas funciones de un Sistema Operativo?
+a) Incrementar su fiabilidad.
+b) Disminuir su rendimiento.
+c) Aumentar el grado de indeterminismo del mismo.
+87.- BLa emulación puede lograrse:
+a) Gracias a la microdiagnosis.
+b) Microprogramando el lenguaje máquina del sistema a emular.
+c) Microprogramando funciones de diversos sistemas operativos.
+88.- C¿Cuál de las siguientes afirmaciones es cierta?
+a) La microprogramación se desarrolló para reducir el costo de la implementación de los sistemas operativos.
+b) La microprogramación dinámica posibilita la ejecución más rápida de las funciones del sistema operativo más habituales.
+c) Las principales aplicaciones de la microprogramación son la microdiagnosis, la emulación y la implementación de sistemas operativos.
+89.- A¿Cuál de las siguientes instrucciones se ejecuta en modo usuario?
+a) Un extracódigo o instrucción que provoca una interrupción software.
+b) La escritura en el reloj del ordenador.
+c) La lectura del estado de un controlador de un periférico.
+90.- A¿En qué ambiente sería más aconsejable utilizar compiladores 'quick-anddirty'?
+a) En desarrollo.
+b) En producción.
+c) En cualquiera.
