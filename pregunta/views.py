@@ -6,6 +6,8 @@ from django.urls import reverse
 from django.shortcuts import redirect
 from django.shortcuts import get_object_or_404
 
+from django.views.generic import ListView
+
 import logging
 
 
@@ -61,3 +63,13 @@ def go_to_next(request, pk):
 def go_to_previous(request, pk):
     preg = Pregunta.objects.filter(pk__lt=pk).order_by('pk').last()
     return redirect('pregunta:pregunta_detail', pk=preg.pk)
+
+def search(request):
+    query = request.GET.get('search')
+    if query:
+        result = Pregunta.objects.filter(pregunta_s__contains=query)
+    else:
+        result = None
+    return render(request,'pregunta/buscar.html',{'preguntas' : result})
+
+       

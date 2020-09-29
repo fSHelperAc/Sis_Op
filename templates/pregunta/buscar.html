@@ -1,0 +1,13 @@
+{% extends 'base.html'%}
+
+{% block title%} Questionario {% endblock %}
+{% block content %}
+
+ {% for pregunta in preguntas%}
+      <div > 
+         <a href="{{pregunta.get_absolute_url}}">{{ pregunta.pregunta_s}}</a> 
+      </div>
+      {% empty %}
+      <div><h3> No hay nada asi</h3></div>
+ {% endfor %}
+{% endblock %}
