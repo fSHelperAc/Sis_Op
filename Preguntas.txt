@@ -159,7 +159,7 @@ c) En los sistemas transaccionales el sistema operativo secuencia las transaccio
 a) Todos los sistemas multiprocesador son distribuidos.
 b) Todos los sistemas distribuidos utilizan una red.
 c) Todos los sistemas multiprocesador utilizan una red.
-41.- C¿Hay alguna relación hay entre los sistemas monolíticos y los modulares?
+41.- B¿Hay alguna relación hay entre los sistemas monolíticos y los modulares?
 a) Ninguna, un sistema modular no es un sistema monolítico sino por niveles.
 b) Los sistemas monolíticos pueden ser modulares.
 c) Se diferencian en que en un sistema monolítico nunca hay ocultamiento de información.

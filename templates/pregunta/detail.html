@@ -8,55 +8,45 @@
 {% block content %}
 <script>
     function del_but_color(){
-        document.getElementById("A").classList.remove('bg-success');
-            document.getElementById("A").classList.remove('bg-danger');
-            document.getElementById("B").classList.remove('bg-success');
-            document.getElementById("B").classList.remove('bg-danger');
-            document.getElementById("C").classList.remove('bg-success');
-            document.getElementById("C").classList.remove('bg-danger');
-    }
+        var elements = document.getElementsByClassName("resp-button");
 
-    function is_respuesta(resp){
-    
-        if(resp == "{{ pregunta.resp_c }}" ){
-            del_but_color();
-            document.getElementById(resp).classList.add('bg-success');
-        } else {
-            del_but_color();
-
-            document.getElementById(resp).classList.add('bg-danger');
+        for(var i = 0; i < elements.length; i++){
+            elements[i].classList.remove('btn-success');
+            elements[i].classList.remove('btn-danger');
         }
-    
+        
     }
-    </script>
+
+    function is_respuesta(obj, resp){
+        del_but_color();
+        obj.classList.add((resp == 'True') ? 'btn-success' : 'btn-danger');
+    }
+
+</script>
     <div class="card">
 
         <div class="card-header"><h3>{{ pregunta.pregunta_s}}</h3>  </div>
         <div class="container ">
-            
+            {% for resp in respuesta %}
                 <div class = "row p-1">
-                        <button onclick="is_respuesta('A')" id="A" class="btn col-lg"> 
-                           <h4>{{ pregunta.respuesta_a}}</h4>
-                         </button>
-                    
+                    <button onclick="is_respuesta(this,'{{ resp.es_correcta }}')" class="resp-button btn-primary col-lg"> 
+                        <h4>{{ resp.texto }}</h4>
+                    </button>
                 </div>
-                <div class = "row p-1">
-                        <button onclick="is_respuesta('B')" id="B" class="btn col-lg"> 
-                            <h4>{{ pregunta.respuesta_b}}</h4>
-                         </button>
-    
-                </div>
-                <div class = "row p-1"> 
-                        <button onclick="is_respuesta('C')" id="C" class="btn col-lg"> 
-                            <h4>{{ pregunta.respuesta_c}}</h4>
-                        </button>
-
-                </div>
+                {% empty %}
+                <div>VACIO</div>
+            {% endfor %}
 
         </div>
-        <a href="/random" ><div class="card-footer">
-             Go to random
-        </div></a>
+        
+            <div class="card-footer container-fluid">
+                <div class="row">
+                    <a href="{{pregunta.get_previous_url}}" ><div class="col">Go to Previous</div></a>
+                    <a href="/random" ><div class="col">Go to random</div></a>
+                    <a href="{{pregunta.get_next_url}}" ><div class="col">Go to Next</div></a>
+                </div>
+            </div>
+        </a>
 
     </div>
 

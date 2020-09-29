@@ -1,10 +1,13 @@
 from django.shortcuts import render
 import re
 import random
-from .models import Pregunta
+from .models import Pregunta, Respuesta
 from django.urls import reverse
 from django.shortcuts import redirect
 from django.shortcuts import get_object_or_404
+
+import logging
+
 
 class PreguntaP:
     p = ""
@@ -21,7 +24,8 @@ def preguntas_list(request):
 
 def pregunta_detail(request, pk):
     pregunta = get_object_or_404(Pregunta, pk=pk)
-    return render(request,'pregunta/detail.html',{'pregunta': pregunta})
+    respuesta = Respuesta.objects.filter(pregunta = pk)
+    return render(request,'pregunta/detail.html',{'respuesta': respuesta,'pregunta': pregunta})
 
 def populate(request):
     pregs = []
@@ -34,15 +38,26 @@ def populate(request):
                 continue
             pp = PreguntaP(i)
 
-            new_entry = Pregunta(pregunta_s =pp.p)
-            new_entry.respuesta_a= pp.r[0]
-            new_entry.respuesta_b= pp.r[1]
-            new_entry.respuesta_c= pp.r[2]
-            new_entry.resp_c = pp.r_c
-            new_entry.save()
+            entry_preg = Pregunta(pregunta_s =pp.p, author = "Erik")
+            ii = 0
+            varss = "ABC"
+            entry_preg.save()
+            for i in pp.r:
+                entry_resp = Respuesta(pregunta=entry_preg, texto = i, es_correcta =  varss[ii]==pp.r_c)
+                entry_resp.save()
+                ii+=1
+            
     return render(request,'pregunta/temp.html',{})
 
 def go_to_random(request):
     preguntas = Pregunta.objects.all()
     preg = random.choice(preguntas)
+    return redirect('pregunta:pregunta_detail', pk=preg.pk)
+
+def go_to_next(request, pk):
+    preg = Pregunta.objects.filter(pk__gt=pk).order_by('pk').first()
+    return redirect('pregunta:pregunta_detail', pk=preg.pk)
+
+def go_to_previous(request, pk):
+    preg = Pregunta.objects.filter(pk__lt=pk).order_by('pk').last()
     return redirect('pregunta:pregunta_detail', pk=preg.pk)
