@@ -1,7 +1,7 @@
 from django.shortcuts import render
 import re
 import random
-from .models import Pregunta, Respuesta
+from .models import Pregunta, Respuesta, Cuestionario, Topic
 from django.urls import reverse
 from django.shortcuts import redirect
 from django.shortcuts import get_object_or_404
@@ -16,18 +16,21 @@ class PreguntaP:
     r = []
     r_c = ""
     def __init__(self, s):
-        s_S = [x.strip() for x in re.compile("(a\)|b\)|c\))").split(s)]
-        self.r_c, self.p, self.r = s_S[0][0], s_S[0][1:], [i+j for i,j in zip(s_S[1::2], s_S[2::2])]
+        s_S = [x.strip() for x in re.compile("a\)|b\)|c\)").split(s)]
+        self.r_c, self.p, self.r = s_S[0][0], s_S[0][1:], s_S[1:]
 
+def get_questionaries(request):
+    cuestionarios = Cuestionario.objects.all()
+    return render(request,'home.html', {'cuestionarios': cuestionarios})
 
-def preguntas_list(request):
-    preguntas = Pregunta.objects.all()
-    return render(request,'home.html', {'preguntas': preguntas})
+def preguntas_list(request, pk):
+    preguntas = Pregunta.objects.filter(cuestionario_k = pk)
+    return render(request,'cuestionarios/cuestionario.html', {'preguntas': preguntas})
 
 def pregunta_detail(request, pk):
     pregunta = get_object_or_404(Pregunta, pk=pk)
-    respuesta = Respuesta.objects.filter(pregunta = pk)
-    return render(request,'pregunta/detail.html',{'respuesta': respuesta,'pregunta': pregunta})
+    respuestas = Respuesta.objects.filter(pregunta_k = pk)
+    return render(request,'cuestionarios/pregunta/detail.html',{'respuestas': respuestas,'pregunta': pregunta})
 
 def populate(request):
     pregs = []
@@ -58,10 +61,14 @@ def go_to_random(request):
 
 def go_to_next(request, pk):
     preg = Pregunta.objects.filter(pk__gt=pk).order_by('pk').first()
+    if preg == None:
+        return redirect('pregunta:pregunta_detail', pk=pk)
     return redirect('pregunta:pregunta_detail', pk=preg.pk)
 
 def go_to_previous(request, pk):
     preg = Pregunta.objects.filter(pk__lt=pk).order_by('pk').last()
+    if preg == None:
+        return redirect('pregunta:pregunta_detail', pk=pk)
     return redirect('pregunta:pregunta_detail', pk=preg.pk)
 
 def search(request):

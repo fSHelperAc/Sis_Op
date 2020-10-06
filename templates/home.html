@@ -2,10 +2,17 @@
 
 {% block title%} Questionario {% endblock %}
 {% block content %}
- {% for pregunta in preguntas%}
-      <div > 
-         <a href="{{pregunta.get_absolute_url}}">{{ pregunta.pregunta_s}}</a> 
-      </div>
+<div class="container"></div>
+   <div class="col p-1">
+   {% for cuestionario in cuestionarios%}   
+      <a href="{{cuestionario.get_absolute_url}}">
+         <div class="row my-1 btn-primary">
+            <h3 class="text-light text-center text-capitalize">{{ cuestionario.name}}</h3>
+         </div>
+      </a> 
+         
 
- {% endfor %}
+   {% endfor %}
+   </div>
+</div>
 {% endblock %}

@@ -27,7 +27,7 @@
 
         <div class="card-header"><h3>{{ pregunta.pregunta_s}}</h3>  </div>
         <div class="container ">
-            {% for resp in respuesta %}
+            {% for resp in respuestas %}
                 <div class = "row p-1">
                     <button onclick="is_respuesta(this,'{{ resp.es_correcta }}')" class="resp-button btn-primary col-lg"> 
                         <h4>{{ resp.texto }}</h4>

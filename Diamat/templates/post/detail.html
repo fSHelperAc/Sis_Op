@@ -1,0 +1,74 @@
+{% extends 'base.html'%}
+
+{% load crispy_forms_tags %}
+
+{%block title} DIAMAT POST {%endblock}
+
+{% block content %}
+    <script>
+        function change_comment_id(comment_id){
+            document.getElementById("id_comment_parent").setAttribute("value", comment_id);
+        } 
+    </script>
+
+    <div class="container">
+        <div class="card my-3 shadow">
+            <!-- Post Header -->
+            {% if post.has_image_ %}
+            <img class="card-img-top" src="{{post.image.url}}" alt="{{post.image_alt}}"/>
+            {% endif %}
+            <!-- Post Body -->
+            <div class="p-5">
+                <h1 class="card-title">{{ post.title }}</h1>
+                <p class="date">
+                    Published {{ post.publish }}
+                </p>
+                <p class="card-text"> 
+                    {{ post.body|linebreaks|safe}} 
+                </p>
+            </div>
+            <div class="card-footer">
+                Compartir
+            </div>
+        </div>
+        <!-- Comment Section-->
+        <div id="comment-write" class="my-4 p-3 card shadow">
+            <h2 class="card-title">Escribir comentario</h2>
+            <form action="?" method="post">
+                {% csrf_token %}
+                {{ form | crispy }}
+                <button type="submit" class="btn btn-primary btn-lg">Enviar</button>
+            </form>
+        </div>
+        
+        <div id="comment-section" class="card my-4 p-3 shadow">
+            <h2 class="card-title">Seccion de comentarios</h2>
+            <div>
+                {% for comment in comments%}
+                    <div class="card my-2 shadow">
+                        <div class="card-body">
+                            <p class="card-text">{{comment.body}}</p>
+                        </div>
+                        <div class="card-footer py-0 bg-danger" >
+                            <div class="row">
+                                <div class="col">
+                                    <p class="text-light">
+                                        Escrito por {{comment.author}} el {{comment.date}} 
+                                        {% if comment.comment_parent %} y responde a {{comment.comment_parent}} {%endif%}
+                                    </p>
+                                </div>
+                                <div class="col" style="display:flex;flex-direction: row-reverse;align-items: center;">
+                                 
+                                <input type="button" class="btn btn-light py-0"  value="Responder" onclick="change_comment_id({{comment.id}})"/>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+
+        </div>
+        
+    </div>
+{% endblock %}
